@@ -23,6 +23,6 @@ struct _lst
 typedef struct _lst _lst_array;
 
 
-int _putchar(char _o);
+int _putchar(char _a);
 
 #endif
