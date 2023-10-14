@@ -22,7 +22,8 @@ struct _lst
 };
 typedef struct _lst _lst_array;
 
-
+int _printf(const char *restrict format, ...);
 int _putchar(char _a);
+
 
 #endif
