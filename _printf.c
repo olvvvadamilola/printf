@@ -4,27 +4,41 @@
  * @format: format string
  * @...: variable arguments
  * Return: number of characters printed.
-*/
+ */
 int _printf(const char *format, ...)
 {
-    int count = 0;
-    va_list catalog;
-    const char *_format;
+	int tally = 0;
+	va_list catalog;
+	const char *pattern;
 
-    if (format == NULL)
-        return (-1);
-    _format = format;
+	if (format == NULL)
+		return (-1);
+	pattern = format;
 
-    if ((_format[0] == '%' && !_format[1]) || !_format)
-    return (-1);
-    if ((_format[2] && _format[0] == '%' && _format[1] == ' '))
-    return (-1);
+	if ((pattern[0] == '%' && !pattern[1]) || !pattern)
+		return (-1);
+	if ((pattern[2] && pattern[0] == '%' && pattern[1] == ' '))
+		return (-1);
 
-    va_start(catalog, format);
+	va_start(catalog, format);
 
-
+	for (; *pattern; pattern++)
+	{
+		if (*pattern == '%')
+		{
+			pattern++;
+			if (_search(*pattern))
+				tally += select_funct(*pattern)(catalog);
+			else if (*pattern == '%')
+			{
+				tally += _putchar('%');
+				tally += _putchar(*pattern);
+				continue;
+			}
+		}
+		else
+			tally += _putchar(*pattern);
+	}
+	va_end(catalog);
+	return (tally);
 }
-
-
-
-
