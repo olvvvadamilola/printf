@@ -18,7 +18,7 @@
 struct _lst
 {
     char _char;
-    int (*_funct)(va_list);
+    int (*_funct)(va_list args);
 };
 typedef struct _lst _lst_array;
 
