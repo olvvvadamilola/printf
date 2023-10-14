@@ -5,7 +5,7 @@
  * @...: variable arguments
  * Return: number of characters printed.
 */
-int _printf(const char *restrict format, ...)
+int _printf(const char *format, ...)
 {
 
 }
