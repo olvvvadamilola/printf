@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
     int count = 0;
-    va_list args;
+    va_list catalog;
     const char *_format;
 
     if (format == NULL)
@@ -20,9 +20,9 @@ int _printf(const char *format, ...)
     if ((_format[2] && _format[0] == '%' && _format[1] == ' '))
     return (-1);
 
-    va_start(args, format);
+    va_start(catalog, format);
 
-    
+
 }
 
 

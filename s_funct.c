@@ -2,13 +2,13 @@
 
 /**
  * s_funct - function to print a string to stdout
- * @args: va_list of arguments
+ * @catalog: va_list of arguments
  * Return: 0
  */
-int s_funct(va_list args)
+int s_funct(va_list catalog)
 {
 	int j = 0;
-	char *str = va_arg(args, char*);
+	char *str = va_arg(catalog, char*);
 
 	if (!str)
 		str = "(null)";

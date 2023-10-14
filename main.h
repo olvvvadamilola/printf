@@ -19,14 +19,14 @@
 typedef struct _list
 {
     char _char;
-    int (*_funct)(va_list args);
+    int (*_funct)(va_list catalog);
 } list_array;
 
 int _printf(const char *format, ...);
 int _putchar(char _a);
-int c_funct(va_list args);
-int s_funct(va_list args);
-int (*select_funct(char s))(va_list args);
+int c_funct(va_list catalog);
+int s_funct(va_list catalog);
+int (*select_funct(char s))(va_list catalog);
 
 
 #endif

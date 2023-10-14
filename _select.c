@@ -6,18 +6,18 @@
  * Return: number of characters printed.
  */
 
-int (*select_funct(char s))(va_list args)
+int (*select_funct(char s))(va_list catalog)
 {
-	int i;
+	int k;
 
 	list_array format_s[] = {
 		{'c', &c_funct},
 		{'s', &s_funct},
 		{'\0', NULL}
 	};
-	for (i = 0; format_s[i]._char; i++)
-		if (s == format_s[i]._char)
-			return (format_s[i]._funct);
+	for (k = 0; format_s[k]._char; k++)
+		if (s == format_s[k]._char)
+			return (format_s[k]._funct);
 
 	return (0);
 }

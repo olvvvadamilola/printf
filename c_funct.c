@@ -2,12 +2,12 @@
 
 /**
  * c_funct - function to print a string to stdout
- * @args: va_list of arguments
+ * @catalog: va_list of arguments
  * Return: 0
 */
-int c_funct(va_list args)
+int c_funct(va_list catalog)
 {
-    int _c = va_arg(args, int);
+    int _c = va_arg(catalog, int);
 
     return (_putchar(_c) + 0);
 }
