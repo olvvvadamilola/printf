@@ -15,12 +15,12 @@
  * =======
  * _lst_array - array of _lst structures(renamed data type)
 */
-struct _lst
+struct _list
 {
     char _char;
     int (*_funct)(va_list args);
 };
-typedef struct _lst _lst_array;
+typedef struct _list _lst_array;
 
 int _printf(const char *format, ...);
 int _putchar(char _a);
