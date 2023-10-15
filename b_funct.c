@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * b_funct - Prints an unsigned long long integer in binary
+ * b_funct - converts integer to binary and prints to stdou
  * @catalog: Argument list
- * Return: number of chars printed
+ * Return: binary number
  */
 
 int b_funct(va_list catalog)
@@ -19,7 +19,7 @@ int b_funct(va_list catalog)
 		_putchar(g);
 		return (1);
 	}
-	/* Convert the decimal number to binary */
+	/* Convert int to binary */
 	while (w > 0)
 	{
 		binary[bi++] = w % 2;
@@ -29,7 +29,7 @@ int b_funct(va_list catalog)
 	{
 		return (-1);
 	}
-	/* Print the binary number */
+	/* Print the binary number in reverse order  */
 	for (j = bi - 1; j >= 0; j--)
 	{
 		int x = binary[j] + 48;
