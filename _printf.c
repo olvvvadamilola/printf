@@ -7,8 +7,8 @@
 int _printf(const char *format, ...)
 {
 	int tally = 0;
-	va_list catalog;
 	const char *frmt;
+    va_list catalog;
 
 	if (format == NULL)
 		return (-1);
