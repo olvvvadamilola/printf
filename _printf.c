@@ -4,7 +4,7 @@
  * @format: format string
  * Return: number of characters printed.
  */
-int _printf(const char * const format, ...)
+int _printf(const char *format, ...)
 {
 	int tally = 0;
 	const char *frmt;
