@@ -13,6 +13,8 @@ int (*select_funct(char f))(va_list catalog)
 	list_array format_s[] = {
 		{'c', &c_funct},
 		{'s', &s_funct},
+		{'d', &d_funct},
+		{'i', &d_funct},
 		{'\0', NULL}
 	};
 	for (k = 0; format_s[k].chr; k++)
