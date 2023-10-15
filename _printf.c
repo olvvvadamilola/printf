@@ -8,39 +8,39 @@ int _printf(const char *format, ...)
 {
 	int tally = 0;
 	va_list catalog;
-	const char *pattern;
+	const char *frmt;
 
 	if (format == NULL)
 		return (-1);
-	pattern = format;
+	frmt = format;
 
-	if ((pattern[0] == '%' && !pattern[1]) || !pattern)
+	if ((frmt[0] == '%' && !frmt[1]) || !frmt)
 		return (-1);
-	if ((pattern[2] && pattern[0] == '%' && pattern[1] == ' '))
+	if ((frmt[2] && frmt[0] == '%' && frmt[1] == ' '))
 		return (-1);
 
 	va_start(catalog, format);
 
-	for (; *pattern; pattern++)
+	for (; *frmt; frmt++)
 	{
-		if (*pattern == '%')
+		if (*frmt == '%')
 		{
-			pattern++;
-			if (_search(*pattern))
-				tally += select_funct(*pattern)(catalog);
-			else if (*pattern == '%')
+			frmt++;
+			if (_search(*frmt))
+				tally += select_funct(*frmt)(catalog);
+			else if (*frmt == '%')
 			{
 				tally += _putchar('%');
 			}
 			else
 			{
 				tally += _putchar('%');
-				tally += _putchar(*pattern);
+				tally += _putchar(*frmt);
 				continue;
 			}
 		}
 		else
-			tally += _putchar(*pattern);
+			tally += _putchar(*frmt);
 	}
 	va_end(catalog);
 	return (tally);
