@@ -5,8 +5,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <limits.h>
-
-#define buffer_size 1024
+#include <stdlib.h>
 
 /**
  * _list - structure to hold a list of functions
