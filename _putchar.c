@@ -5,10 +5,10 @@
  * _putchar - function to print a character
  * @_a: character to print
  *
- * Return: 0
+ * Return: 1 on success.
+ * -1 on error and errno is set appropriately.
  */
 int _putchar(char _a)
 {
-	write(1, &_a, 1);
-	return (1);
+	return (write(1, &_a, 1));
 }
