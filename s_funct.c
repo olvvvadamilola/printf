@@ -8,15 +8,15 @@
 int s_funct(va_list catalog)
 {
 	int j = 0;
-	char *str = va_arg(catalog, char*);
+	char *_str = va_arg(catalog, char*);
 
-	if (!str)
-		str = "(null)";
+	if (!_str)
+		_str = "(null)";
 
-	if (*str == '\0')
+	if (*_str == '\0')
 		return (0);
 
-	for (; *str; str++, j++)
-		_putchar(*str);
+	for (; *_str; _str++, j++)
+		_putchar(*_str);
 	return (j);
 }
