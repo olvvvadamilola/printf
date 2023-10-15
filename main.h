@@ -8,17 +8,17 @@
 #include <stdlib.h>
 
 /**
- * _list - structure to hold a list of functions
+ * struct list - structure to hold a list of functions
  * @_char: character to match
  * @_funct: function to call
  * Return: 0
  * =======
  * _lst_array - array of _lst structures(renamed)
-*/
+ */
 typedef struct list
 {
-    char _char;
-    int (*_funct)(va_list catalog);
+	char _char;
+	int (*_funct)(va_list catalog);
 } list_array;
 
 int _printf(const char *format, ...);
