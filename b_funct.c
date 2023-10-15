@@ -8,31 +8,33 @@
 
 int b_funct(va_list catalog)
 {
+	unsigned int w, g;
+	int binary[65];
+	int bi = 0, j;
 
-	unsigned long long bi; /*Use 64-bit variable*/
-	char binary[65];
-	int i, x = 0;
-
-	bi = va_arg(catalog, unsigned long long); /*Get 64-bit argument*/
-
-	if (bi == 0)
+	w = va_arg(catalog, int);
+	if (w == 0)
 	{
-		_putchar('0');
+		g = w + '0';
+		_putchar(g);
 		return (1);
 	}
-
-	for (i = 0; bi > 0; i++)
+	/* Convert the decimal number to binary */
+	while (w > 0)
 	{
-		binary[i] = (bi % 2) + '0';
-		bi /= 2;
+		binary[bi++] = w % 2;
+		w /= 2;
 	}
-
-	for (i = i - 1; i >= 0; i--)
+	if (bi >= 65)
 	{
-		_putchar(binary[i]);
-		x++;
+		return (-1);
 	}
+	/* Print the binary number */
+	for (j = bi - 1; j >= 0; j--)
+	{
+		int x = binary[j] + 48;
 
-	return (x);
-
+		_putchar(x);
+	}
+	return (bi);
 }
