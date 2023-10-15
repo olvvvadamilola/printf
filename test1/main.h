@@ -10,7 +10,7 @@
 
 /**
  * _list - structure to hold a list of functions
- * @_char: character to match
+ * @chr: character to match
  * @_funct: function to call
  * Return: 0
  * =======
@@ -18,7 +18,7 @@
 */
 typedef struct _list
 {
-    char _char;
+    char chr;
     int (*_funct)(va_list catalog);
 } list_array;
 
