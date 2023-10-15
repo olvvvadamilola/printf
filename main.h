@@ -16,7 +16,7 @@
  * =======
  * _lst_array - array of _lst structures(renamed)
 */
-typedef struct _list
+typedef struct list
 {
     char _char;
     int (*_funct)(va_list catalog);
