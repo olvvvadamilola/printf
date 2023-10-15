@@ -2,11 +2,11 @@
 
 /**
  * select_funct - selects the correct function to perform.
- * @s: character to match
+ * @f: character to match
  * Return: number of characters printed.
  */
 
-int (*select_funct(char s))(va_list catalog)
+int (*select_funct(char f))(va_list catalog)
 {
 	int k;
 
@@ -16,7 +16,7 @@ int (*select_funct(char s))(va_list catalog)
 		{'\0', NULL}
 	};
 	for (k = 0; format_s[k]._char; k++)
-		if (s == format_s[k]._char)
+		if (f == format_s[k]._char)
 			return (format_s[k]._funct);
 
 	return (0);

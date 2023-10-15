@@ -16,6 +16,6 @@ int _search(char letter)
 		if (letter == letter_arr[it])
 			return (1);
 	}
-    
+
 	return (0);
 }

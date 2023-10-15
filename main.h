@@ -26,7 +26,7 @@ int _printf(const char *format, ...);
 int _putchar(char _a);
 int c_funct(va_list catalog);
 int s_funct(va_list catalog);
-int (*select_funct(char s))(va_list catalog);
+int (*select_funct(char f))(va_list catalog);
 int _search(char letter);
 
 
