@@ -9,5 +9,5 @@ int c_funct(va_list catalog)
 {
 	int _c = va_arg(catalog, int);
 
-	return (_putchar(_c) + 0);
+	return (_putchar(_c));
 }
