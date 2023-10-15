@@ -2,7 +2,6 @@
 /**
  * _printf - custom printf function to print formatted strings
  * @format: format string
- * @...: variable arguments
  * Return: number of characters printed.
  */
 int _printf(const char *format, ...)
@@ -30,6 +29,10 @@ int _printf(const char *format, ...)
 			if (_search(*pattern))
 				tally += select_funct(*pattern)(catalog);
 			else if (*pattern == '%')
+			{
+				tally += _putchar('%');
+			}
+			else
 			{
 				tally += _putchar('%');
 				tally += _putchar(*pattern);
