@@ -2,7 +2,7 @@
 
 /**
  * _search - searches for a letter in the array
- * @name: character
+ * @letter: character
  * Return: 0 or 1(exists)
  */
 
