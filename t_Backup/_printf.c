@@ -14,7 +14,9 @@ int _printf(const char *format, ...)
 		return (-1);
 	frmt = format;
 
-	if ((frmt[0] == '%' && (!frmt[1] || (frmt[1] == ' '))) || !frmt)
+	if ((frmt[0] == '%' && !frmt[1]) || !frmt)
+		return (-1);
+	if ((frmt[2] && frmt[0] == '%' && frmt[1] == ' '))
 		return (-1);
 
 	va_start(catalog, format);
