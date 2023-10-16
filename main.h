@@ -7,6 +7,8 @@
 #include <limits.h>
 #include <stdlib.h>
 
+#define buffer_size 1024
+
 /**
  * struct list - structure to hold a list of functions
  * @chr: character to match
