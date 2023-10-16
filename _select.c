@@ -18,6 +18,8 @@ int (*select_funct(char f))(va_list catalog)
 		{'b', &b_funct},
 		{'u', &u_funct},
 		{'o', &_octal8},
+		{'x', &x_funct},
+		{'X', &X_funct},
 		{'p', &p_funct},
 
 		{'\0', NULL}
