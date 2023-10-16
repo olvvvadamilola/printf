@@ -4,10 +4,12 @@
  * @format: format string
  * Return: number of characters printed.
  */
+int _printf(const char *format, ...);
 int _printf(const char *format, ...)
 {
 	int tally = 0;
 	const char *frmt;
+	int up_low;
 	va_list catalog;
 
 	if (format == NULL)
@@ -24,7 +26,12 @@ int _printf(const char *format, ...)
 		if (*frmt == '%')
 		{
 			frmt++;
-			if (_search(*frmt))
+			if (*frmt == 'x' || *frmt == 'X')
+			{
+				up_low = (*frmt == 'X') ? 1 : 0;
+				tally += hexa16(catalog, up_low);
+			}
+			else if (_search(*frmt))
 				tally += select_funct(*frmt)(catalog);
 			else if (*frmt == '%')
 			{
