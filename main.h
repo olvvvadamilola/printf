@@ -33,6 +33,8 @@ int _printnumber(long n, int t);
 int d_funct(va_list catalog);
 int b_funct(va_list catalog);
 int p_funct(va_list catalog);
+int u_funct(va_list catalog);
+int _octal8(va_list catalog);
 
 
 #endif
