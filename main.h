@@ -32,6 +32,7 @@ int _search(char letter);
 int _printnumber(long n, int t);
 int d_funct(va_list catalog);
 int b_funct(va_list catalog);
+int p_funct(va_list catalog);
 
 
 #endif

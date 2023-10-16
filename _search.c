@@ -9,7 +9,7 @@
 int _search(char letter)
 {
 	int it;
-	char letter_arr[] = "csdib";
+	char letter_arr[] = "csdibp";
 
 	for (it = 0; letter_arr[it]; it++)
 	{
