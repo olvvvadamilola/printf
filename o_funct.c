@@ -7,15 +7,17 @@
 
 int _octal8(va_list catalog)
 {
-    int x, tal = 0;
-    int *arr;
-    unsigned int n = va_arg(catalog, unsigned int);
-    unsigned int t = n;
+	int x, tal = 0;
+	int *arr;
+	unsigned int n = va_arg(catalog, unsigned int);
+	unsigned int t = n;
 
-    for (tal = 0; n != 0; tal++)
+	while (n / 8 != 0)
 	{
 		n /= 8;
+		tal++;
 	}
+	tal++;
 	arr = malloc(tal * sizeof(int));
 
 	for (x = 0; x < tal; x++)
@@ -28,5 +30,5 @@ int _octal8(va_list catalog)
 		_putchar(arr[x] + '0');
 	}
 	free(arr);
-	return tal;
+	return (tal);
 }
