@@ -7,6 +7,8 @@
 #include <limits.h>
 #include <stdlib.h>
 
+#define buffer_size 1024
+
 /**
  * struct list - structure to hold a list of functions
  * @chr: character to match
@@ -30,6 +32,7 @@ int _search(char letter);
 int _printnumber(long n, int t);
 int d_funct(va_list catalog);
 int b_funct(va_list catalog);
+<<<<<<< HEAD
 int get_width(const char *format, int *i, va_list list);
 int get_size(const char *format, int *i);
 int get_precision(const char *format, int *i, va_list list);
@@ -39,5 +42,13 @@ int print_reverse(va_list types, char buffer[],
 int flags, int width, int precision, int size);
 int print_rot13string(va_list types, char buffer[],
 int flags, int width, int precision, int size);
+=======
+int p_funct(va_list catalog);
+int u_funct(va_list catalog);
+int _octal8(va_list catalog);
+int x_funct(va_list catalog);
+int X_funct(va_list catalog);
+
+>>>>>>> bc8f0c13cd40285ce4842527c9c89acd57776b75
 
 #endif

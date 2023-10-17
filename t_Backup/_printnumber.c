@@ -2,7 +2,7 @@
 /**
  * _printnumber - prints a number
  * @n: number to print
- * @t: number of times to print
+ * @t: number of times printed
  * Return: number of times printed
  */
 int _printnumber(long n, int t)

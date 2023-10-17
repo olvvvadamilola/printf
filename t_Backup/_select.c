@@ -16,12 +16,8 @@ int (*select_funct(char f))(va_list catalog)
 		{'d', &d_funct},
 		{'i', &d_funct},
 		{'b', &b_funct},
-		{'u', &u_funct},
-		{'o', &_octal8},
 		{'x', &x_funct},
 		{'X', &X_funct},
-		{'p', &p_funct},
-
 		{'\0', NULL}
 	};
 	for (k = 0; format_s[k].chr; k++)
