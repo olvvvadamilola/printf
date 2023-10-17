@@ -37,6 +37,7 @@ int u_funct(va_list catalog);
 int _octal8(va_list catalog);
 int x_funct(va_list catalog);
 int X_funct(va_list catalog);
+int get_width(const char *format, int *k, va_list catalog);
 
 
 #endif
